@@ -16,14 +16,13 @@ connectDB();
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: "*" } });
+app.use(bodyParser.json());
 
 // Middleware
 app.use(cors({
-  // origin: 'https://zumeit.onrender.com',
   origin: 'http://localhost:3000',
   credentials: true,
 }));
-app.use(bodyParser.json());
 
 // Routes
 app.use("/users", userRoutes);

@@ -18,7 +18,11 @@ const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: "*" } });
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  // origin: 'https://zumeit.onrender.com',
+  origin: 'http://localhost:3000',
+  credentials: true,
+}));
 app.use(bodyParser.json());
 
 // Routes

@@ -25,6 +25,9 @@ app.use(bodyParser.json());
 app.use("/users", userRoutes);
 app.use("/leaderboard", leaderboardRoutes);
 
+app.get('/', (req,res)=>{
+  res.json("Server side")
+})
 // WebSocket for real-time updates
 io.on("connection", (socket) => {
   console.log("Client connected");

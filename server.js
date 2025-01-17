@@ -26,7 +26,7 @@ app.use("/users", userRoutes);
 app.use("/leaderboard", leaderboardRoutes);
 
 app.get('/', (req,res)=>{
-  res.json("Server side")
+  console.log("Server running");
 })
 // WebSocket for real-time updates
 io.on("connection", (socket) => {

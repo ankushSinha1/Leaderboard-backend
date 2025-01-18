@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 
 // Middleware
 app.use(cors({
-  origin:'http://localhost:3000', 
+  origin:'https://leaderboard-frontend-nu.vercel.app/', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200
 }));

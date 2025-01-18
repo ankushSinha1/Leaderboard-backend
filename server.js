@@ -19,11 +19,7 @@ const io = new Server(server, { cors: { origin: "*" } });
 app.use(bodyParser.json());
 
 // Middleware
-app.use(cors({
-  origin:'https://leaderboard-frontend-nu.vercel.app/', 
-  credentials:true,            //access-control-allow-credentials:true
-  optionSuccessStatus:200
-}));
+app.use(cors());
 
 // Routes
 app.use("/users", userRoutes);
